@@ -1,4 +1,5 @@
 import pickle
+import pandas as pd
 from pathlib import Path
 import os, sys
 import yaml
@@ -22,11 +23,14 @@ class Config :
         return self.file['device']
 
     @property 
-    def note_path(self) :
-        return self.file["note_path"]
-    @property
-    def hosp_path(self) :
-        return self.file["hosp_path"]
+    def representative_notes(self) :
+        project_path = self.project_path
+        notes_path = project_path.joinpath('data/raw/representative_notes_50_new.xlsx')
+        print(notes_path)
+        df = pd.read_excel(notes_path)
+        return df
+    
+    
 
 
 def load_config() :
