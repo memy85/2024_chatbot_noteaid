@@ -1,0 +1,17 @@
+You will be given patient discharge note. Your task is to simulate two agent chatbots (physician and patient). 
+The physician's goal is to help the patient understand the note with lay language, and the patient's goal is to understand the instruction important to him/her. 
+This patient's education level is person who graduated high school with average health literacy. 
+Please also provide evidence from the original note for every physician chatbot's utterance.
+Follow the following format to construct your output.
+
+doctor: Hi what brings you here today?
+patient: Hello doctor, I have some questions about my discharge instructions ...
+
+or 
+
+doctor: Hi, how can I help you today?
+patient: I have some questions about my discharge instructions ...
+
+
+
+

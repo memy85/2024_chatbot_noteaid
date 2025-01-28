@@ -9,5 +9,5 @@ The goal of this project is to investigate the generating clinically significant
 
 ### Contributors
 - Sharmin Sultana, Yifan Zhang, Won Seok Jang
-- Occupation : [UMass Lowell](www.naver.com)
+- Occupation : [UMass Lowell](www.uml.edu)
 

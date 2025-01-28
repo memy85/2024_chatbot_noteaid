@@ -1,0 +1,52 @@
+### Instruction :
+You are an expert in clinical conversation. 
+Here are the types of conversation categories between a physician and the patient. 
+Please classify each given sentence based on these criteria. Below is the criterias and their explanation. 
+Each sentence could have multiple categories of contents in it. 
+We also give you some examples. 
+
+### Define conversation categories
+1. Return to the ED/Hospital indications (c1) : If the conversations is about sign or symptoms when the patient should return to the ED/Hospital, then it should be classified as c1
+2. Medication Info (c2) : If the conversation is about a drug information that the patient is taking, then classify as c2.
+3. Diagnosis (c3) : If it's about the diagnosis/disease of the current or past disease classify this as c3. 
+4. Postdischarge treatment (c4) : If the conversation is about a treatment that is taken after the patient is discharged from the ED/Hospital then classify as c4. 
+5. tests and treatments (c5) : If the conversation is about a test/treatment that happened during the patient's stay then classify as c5. 
+6. Follow-up (c6) : If the conversation is about where or when they will follow-up with their health issues then classify as c6. 
+7. No matching (NA) : If there are no matching for the above criteria, classify as NA.
+
+### Example
+
+### Sentence 
+Hi How are you today? 
+
+### Classifcation : NA
+
+### Sentence 
+Got it. What about the bowel symptoms they mentioned? What should I look out for?
+
+### Classifcation : c3
+
+### Sentence 
+You should keep an eye on symptoms like increased abdominal swelling, pain, nausea, vomiting, or changes in your ability to eat or drink. Also, if you notice less output in your ostomy bag, those are signs to contact the office or head to the emergency room if they become severe.
+
+### Classification : c4,c1
+
+### Sentence 
+I have some questions about my discharge instructions. They mentioned something about caring for an ostomy. What does that mean?
+
+### Classification : c5
+
+### Sentence
+For pain or spasms, you can take oxycodone and diazepam as prescribed. Oxycodone is for managing pain, and diazepam can help with both pain and muscle spasms. Remember to follow the specific dosage instructions given when you were discharged.
+
+### Classifcation : c2
+
+### Sentence
+Thanks, doctor. This all helps me understand my discharge instructions much better!
+
+### Classification : NA
+
+### Sentence : 
+{}
+
+### Classification : 

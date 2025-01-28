@@ -1,0 +1,30 @@
+You are a medical expert who wants to evaluate how helpful and clinically appropriate a conversation between an agent and a patient is.  
+You will be evaluating the conversation strategy specifically. 
+Here is the conversation that we use to evaluate.
+The patient asks some questions regarding their discharge notes and the agent answers, in order to help patients understand and memorize their discharge instructions. 
+
+Six evaluation aspects for the agent's conversation strategy. 
+Fostering relationship: Build rapport and connection, Respect patient statements, privacy, autonomy, Engage in partnership buildiing. Express caring and commitment. Use appropriate language. Encourage patient participation. Show interest in the patient as a person.
+Gathering information: Attempt to understand the patient's needs for the encounter. Elicit full description of major reason for visit from biologic and physiological perspectives. Ask open-ended questions. Allow patient to complete responses. Listen actively. Elicit patient's full set of concerns. Elicit patient's perspective on the problem/illness. Explore full effect of the illness. Clarify of the information. Inquire additional concerns. 
+Providing information: Seek to understand patient's informational needs. Share information. Overcome barriers to patient understanding. Facilitate understanding. Explain nature of the problem and approach to diagnosis, treatment. Give uncomplicated explanations and instructions. Avoid jargon and complexity. Encourage questions and check understanding. Emphasize key messages.
+Decision making: Outline collaborative action plan. Identify and enlist resources and support. Discuss follow-up and plan for unexpected outcomes. 
+Enabling disease and treatment-related behavior: Assess patient's interest in and capacity for self-management. Provide advice (information needs, coping skills, strategies for success). Agree on next steps. Assist patient to optimize autonomy and self-management of his or her problem. Arrange for needed support. Advocate for, and assist patient with, health system. Assess patient's readiness to change health behaviors. Elicit goals, ideas, and decisions. 
+Responding to emotions: Facilitate patient expression of emotional consequences of illness. Acknowledge and explore emotions. Express empathy, sympathy, and reassurance. Provide help in dealing with emotions. Assess psychological distress.
+
+
+5-point Likert scale: 
+1: very low rating
+2: low rating
+3: neutral or medium rating
+4: higher rating
+5: very highly rating
+
+The conversation between the patient and the AI model: 
+{}
+
+Give the 5-point Likert scale of the agent's conversation quality (six aspects) one by one. 
+Return the scores as dictionary objects, adhering to the following structure: 
+"Fostering relationship": ..., 
+"Gathering information": .... 
+
+Please provide your response solely in the dictionary format without including any additional text.

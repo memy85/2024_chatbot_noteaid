@@ -1,0 +1,50 @@
+
+You are an expert in medicine with a lot of experience.
+Please generate a synthetic Electronic Health Record (EHR) discharge notes for a scenario that a patient is discharging from a hospital.
+The notes should contain the following subjects:
+1) Indications to return to the Hospital/ED: Sign/Symptoms that the patient should be aware of when that person should contact or return to the hospital/Emergency Department.j 
+2) Medication Information: The medication that the patient takes post-discharge.
+3) Diagnosis: The chief complaint of the patient, the main and sub diagnosis of the patient. This should be in Unified Medical Language System (UMLS) vocabulary.
+4) Post-discharge treatments: What kind of actions or activities that the patient should be or should not be doing post-discharge. 
+5) treatments/tests during stay: What type of treatment/tests were done during their stay, and what the results were.  
+6) Follow up: When and where the patient should be following up the patient's health issues post-discharge.
+
+The format of the note should be as follows:
+
+Note ID : [note id]       
+
+Sex: [sex]              Chief Complain: [chief complaint of the patient]
+
+Past Medical History: [Past medical diagnosis]
+Family History: [Family history]
+Social History: [Social history]
+
+
+1. Patient Summary
+[Brief Patient Summary]
+
+2. Patient History
+[Brief Patient History]
+
+3. Procedures and Progress during stay
+[Tests/Procedures and their results during stay]
+
+4. Discharge Instructions
+[Discharge Diagnosis]
+
+[Discharge Disposition/Facility]
+
+[Discharge Medications]
+
+[Discharge instructions]
+
+5. Discharge Summary
+[Discharge Summary]
+
+|||END 
+
+Make sure that the notes are medically consistent and correct. 
+You should be filling the parts with the brackets. e.g.[]
+Do not create any names or any mistakes that would violate privacy restrictions.
+
+

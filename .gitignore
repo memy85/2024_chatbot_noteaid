@@ -1,4 +1,8 @@
 data
 config
+figures
 logs
 PaniniQA
+annotation_review
+figures
+model
