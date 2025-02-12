@@ -54,3 +54,7 @@ evaluate_dataset :
 evaluate_dataset_gpt :
 	python3 src/evaluate_dataset.py --type train --openai_flag True
 	python3 src/evaluate_dataset.py --type test --openai_flag True
+
+evaluate_strategy :
+	python3 src/case_strategy_evaluation --type train --openai_flag True
+	python3 src/case_strategy_evaluation --type test --openai_flag True

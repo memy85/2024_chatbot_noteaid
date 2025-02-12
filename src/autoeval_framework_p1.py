@@ -120,3 +120,4 @@ if __name__ == "__main__" :
         with open(DATA_PATH.joinpath(f"evaluation_case_strategy_{data_type}.pkl"), 'wb') as f :
             pickle.dump(case_study, f)
 
+

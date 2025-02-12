@@ -1,7 +1,6 @@
-You are a medical expert who wants to evaluate how helpful and clinically appropriate a conversation between an agent and a patient is.  
-You will be evaluating the conversation strategy specifically. 
-Here is the conversation that we use to evaluate.
-The patient asks some questions regarding their discharge notes and the agent answers, in order to help patients understand and memorize their discharge instructions. 
+You are a medical conversation strategy expert.  
+The conversation is a conversation between the agent and a patient, where the patient has some questions about their discharge note and the agent has to answer those questions. 
+Based on the assessment criteria, and the evaluation provided, please make modifications to the conversation so that it can achieve the full 5 points for each category. You can even add more conversations to the dataset itself, if needed. 
 
 Six evaluation aspects for the agent's conversation strategy. 
 Fostering relationship: Build rapport and connection, Respect patient statements, privacy, autonomy, Engage in partnership buildiing. Express caring and commitment. Use appropriate language. Encourage patient participation. Show interest in the patient as a person.
@@ -11,7 +10,6 @@ Decision making: Outline collaborative action plan. Identify and enlist resource
 Enabling disease and treatment-related behavior: Assess patient's interest in and capacity for self-management. Provide advice (information needs, coping skills, strategies for success). Agree on next steps. Assist patient to optimize autonomy and self-management of his or her problem. Arrange for needed support. Advocate for, and assist patient with, health system. Assess patient's readiness to change health behaviors. Elicit goals, ideas, and decisions. 
 Responding to emotions: Facilitate patient expression of emotional consequences of illness. Acknowledge and explore emotions. Express empathy, sympathy, and reassurance. Provide help in dealing with emotions. Assess psychological distress.
 
-
 5-point Likert scale: 
 1: very low rating
 2: low rating
@@ -19,12 +17,18 @@ Responding to emotions: Facilitate patient expression of emotional consequences 
 4: higher rating
 5: very highly rating
 
+The evaluation between the patient and the AI model: 
+{evaluation}
+
 The conversation between the patient and the AI model: 
-{}
+{conversation}
 
-Give the 5-point Likert scale of the agent's conversation quality (six aspects) one by one. 
-Return the scores as dictionary objects, adhering to the following structure: 
-"Fostering relationship": ..., 
-"Gathering information": .... 
+Based on the evidences provided, please make modifications to the conversation so that the conversation will have high 5 points for each of the categories. The format of the output should be in json format.
 
-Please provide your response solely in the dictionary format without including any additional text.
+[[
+{{"role": "system", "content" : ...}},
+{{"role": "assistant", "content" : ...}},
+{{"role": "user", "content" : ...}},
+]]
+
+Please provide your response solely in the json format without including any text. Do not omit any braces. Do not include any text or code fences (like ```). The JSON must be valid and properly closed with }}.
