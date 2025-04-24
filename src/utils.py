@@ -24,6 +24,7 @@ special_tokens_dict = {
     "unk_token": DEFAULT_UNK_TOKEN,
 }
 
+
 class Config :
 
     def __init__(self, config_file) :

@@ -1,8 +1,7 @@
 ### Instruction :
 You are an expert in clinical conversation. 
 Here are the types of conversation categories between a physician and the patient. 
-Please classify each given sentence based on these criteria. Below is the criterias and their explanation. 
-Each sentence could have multiple categories of contents in it. 
+Please classify each given sentence based on these criteria. Below is the criterias and their explanation. Each sentence could have multiple categories of contents in it. 
 We also give you some examples. 
 
 ### Define conversation categories
@@ -49,4 +48,7 @@ Thanks, doctor. This all helps me understand my discharge instructions much bett
 ### Sentence : 
 {}
 
-### Classification : 
+### Classification :
+
+
+Please output the class and no other strings included

@@ -25,10 +25,10 @@ The conversation between the patient and the AI model:
 Give the 5-point Likert scale of the agent's conversation quality (six aspects) one by one. When providing the evidence, please describe what would help to improve the score to make them the full 5 point. Keep the evidence concise and short.
 Return the scores as json format, adhering to the following structure: 
 
- {{
+{{
  "Fostering relationship": {{"score": ..., "evidence": ...}},
  "Gathering information": {{"score": ..., "evidence": ...}},
  ..
- }}
+}}
 
 Please provide your response solely in the json format without including any text. Do not omit any braces. Do not include any text or code fences (like ```). The JSON must be valid and properly closed with }}.

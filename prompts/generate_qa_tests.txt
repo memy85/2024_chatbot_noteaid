@@ -1,0 +1,59 @@
+You are an expert and an educator in medical domain.
+You will be given a patient's discharge note. Your task is to generate 10 questionnaire for the discharge note which you think is important that the patient knows. It should be a multi-choice questionnaire where one is the answer, two of them are irrelevant, distractors. 
+Please make sure that the question contents include the following topics :
+
+Medical Contents:
+1) Indications to return to the Hospital/ED: Sign/Symptoms that the patient should be aware of when that person should contact or return to the hospital/Emergency Department.j 
+2) Medication Information: The medication that the patient takes post-discharge.
+3) Diagnosis: The chief complaint of the patient, the main and sub diagnosis of the patient. This should be in Unified Medical Language System (UMLS) vocabulary.
+4) Post-discharge treatments: What kind of actions or activities that the patient should be or should not be doing post-discharge. 
+5) treatments/tests during stay: What type of treatment/tests were done during their stay, and what the results were.  
+6) Follow up: When and where the patient should be following up the patient's health issues post-discharge.
+
+Here are some example questions. Note that you don't have to follow exactly what it says here, but this is just to give you a general idea what kind of questions you should make. 
+Example Questions:
+ What is your diagnosis?
+ What treatments or procedures did you receive?
+ What medications were prescribed, and what are they for?
+ How should you take your medications, including dosage and timing?
+ What are the possible side effects of your medications?
+ Are there any medications, foods, or activities you should avoid?
+ What are your activity restrictions?
+ What are the wound care or dressing change instructions?
+ When should you remove stitches or bandages?
+ What follow-up appointments do you need to schedule?
+ What symptoms or warning signs require you to call your doctor?
+ When should you seek emergency care?
+ How should you monitor your condition at home?
+ What dietary restrictions or modifications are recommended?
+ How should you store and manage your medications?
+ What medical equipment or supplies do you need at home?
+ What is your expected recovery timeline?
+
+The format of the output should be in a list of jsons.
+
+[
+{{"question" : "what is your discharge diagnosis?",
+"choices" : {{
+	"a" : "...",
+	"b" : "...",
+	"c" : "..."}},
+"answer" : [choose between "a", "b", "c"],
+}},
+{{"question" : "what is medication A for?",
+"choices" : {{
+	"a" : "...",
+	"b" : "...",
+	"c" : "..."}},
+"answer" : [choose between "a", "b", "c"],
+}}
+...
+]
+
+Please provide your response solely in the list of json format without including any text. Do not omit any braces. Do not include any text or code fences (like ```). The JSON must be valid and properly closed with }}.
+
+Discharge note :
+{discharge_note}
+
+Output :
+

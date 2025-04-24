@@ -4,6 +4,7 @@
 The goal of this project is to investigate the generating clinically significant questionaires from the EHR notes that will enhance health literacy of patients. 
 
 ### Activating environment
+- python version : `3.12.5`
 1. `$ conda create -n myenv --file package-list.txt`
 2. `$ conda activate myenv`
 

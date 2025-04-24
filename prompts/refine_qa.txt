@@ -1,0 +1,27 @@
+
+You will be given a string that should be converted to json but failed because there are some mismatch in the ' or ". Ensure that all ' or " has their corresponding pair. Please fix this and output a json so that it could be converted to json in python using json.loads. Please output the json and nothing else. 
+
+The string should be in the format like this : 
+
+[
+{{"question" : "what is your discharge diagnosis?",
+"choices" : {{
+	"a" : "...",
+	"b" : "...",
+	"c" : "..."}},
+"answer" : "a",
+}},
+{{"question" : "what is medication A for?",
+"choices" : {{
+	"a" : "...",
+	"b" : "...",
+	"c" : "..."}},
+"answer" : "b",
+}}
+...
+]
+
+input string : 
+{}
+
+Do not omit any braces or ' and ". Do not include any text or code fences (like ```). The JSON must be valid and properly closed with }}.

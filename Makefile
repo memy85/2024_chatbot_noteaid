@@ -1,6 +1,6 @@
 CUDA_DEVICE_ORDER := PCI_BUS_ID
 CUDA_LAUNCH_BLOCKING := 1
-CUDA_VISIBLE_DEVICES := 5
+CUDA_VISIBLE_DEVICES := 5,6
 TORCH_EXTENSIONS_DIR :=/home/zhichaoyang/.cache/torch_extensions
 
 export CUDA_DEVICE_ORDER
@@ -27,7 +27,7 @@ train_llama3.2-1B :
 	python3 src/train_chatbot.py --model llama3.2-1B --trial_number 4 --resume True >> ./logs/train_llama3.2.log 2>&1
 
 # demo
-test_llama3.2-1B :
+demo :
 	python3 src/simulate_chatbot.py
 
 # measure score
@@ -58,3 +58,13 @@ evaluate_dataset_gpt :
 evaluate_strategy :
 	python3 src/case_strategy_evaluation --type train --openai_flag True
 	python3 src/case_strategy_evaluation --type test --openai_flag True
+
+ppo_train :
+	python3 src/train_rl_chatbot.py --type
+
+
+autoeval_stage1 :
+	echo devices : $$CUDA_VISIBLE_DEVICES > ./logs/train_llama3.2.log
+	python3 src/autoeval_framework_p2_finetune.py --model llama3.2-1B --trial_number 5 --resume False
+
+

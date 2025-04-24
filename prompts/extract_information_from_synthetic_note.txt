@@ -1,0 +1,16 @@
+
+You will be given a medical note. With the note, I require you to extract the informations that are required in a dictionary format. Given the required information and categories, please choose the one that best fits the options.
+
+Required Information :
+ - Sex : male or female
+ - Age : Young Adult (19-35 years) / Middle-aged-Adult (36-55 years) / Older Adult (56-75 years) / Elderly (76+ years)
+ - Ethnicity : White / Black or African American / Hispanic or Latino / Asian / Native American or Alaska Native / Native Hawaiian or Pacific Islander / Mixed or Multiracial
+ - Chief Complaint 
+ - Discharge Diagnosis
+ - Disease Categories : Infectious Diseases / Chronic Diseases / Cardiovascular Diseases / Neurological Disorders / Mental Health Disorders / Oncological Diseases / Autoimmune Diseases / Genetic Disorders / Endocrine Disorders / Musculoskeletal Diseases / Gastrointestinal Disorders / Dermatological Diseases / Urinary and Renal Issues / Gynecological & Obstetric Complaints
+
+
+Medical Note :
+{}
+
+please output only the dictionary without any other strings. Make sure that the extracted data are in string format, not in a list.

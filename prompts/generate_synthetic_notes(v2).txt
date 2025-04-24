@@ -1,0 +1,86 @@
+
+You are an expert in medicine with a lot of experience.
+Please generate a synthetic Electronic Health Record (EHR) discharge notes for a scenario that a patient is discharging from a hospital. You will be given some basic demographic information. Please generate according to these predetermined information.
+
+Demographic :
+ Disease category : {disease_category}
+ Age category : {age}
+ Sex : {sex}
+ Ethnicity : {ethnicity}
+ Chief Complaint category : {cc}
+ Procedures : {procedure}
+
+For the quality of the data make sure it has the following components. Please check the description of these components.
+1) Chief Complaint : Enough information to direct history of present illness; includes pertinent details; includes duration
+2) History of the present illness : enough information for its purpose, includes pertinent details. It should also be concise, clear, organized. 
+3) Problem list : List of current(up-to-date) problems and ordered, concise, complete. 
+4) Past Medical history : This should also be complete (addressing all important past medical history), concise, clear and organized.
+5) Medications : Should have current up-to-date medications, complete and concise. 
+6) Adverse drug reactions and allergies : Should have current up-to-date adverse drug reactions and allergies, sufficient information and clear. 
+7) Social and family history : Current up-to-date social and family history, sufficient, clear, concise and organized.
+8) Review of systems : Complete which addresses all pertinent positives and negatives, clear and concise.
+9) Physical findings : Addresses all pertinent positives and negatives, clear and concise. 
+10) Assessment (diagnosis; differential) : It should be prioritized, displaying in order of importance; signs, symptoms, tests, procedures organized properly, includes care plan. Sufficient information, clear and concise.
+11) Plan of care (with goals and objectives) : It should be prioritized, displaying in order of importance; signs, symptoms, tests, procedures organized properly, includes care plan. Sufficient information, clear and concise.
+12) Follow-up information (Instructions for the patient; consults; orders; prescriptions) : It should be prioritized, should convey sufficient information, clear and concise. 
+
+
+The format of the note should be as follows:
+
+Note ID : [note id]       
+
+Sex: [sex]              Chief Complain: [chief complaint of the patient]
+
+Past Medical History: [Past medical diagnosis]
+Family History: [Family history]
+Social History: [Social history]
+
+
+1. Patient Summary
+[Brief Patient Summary]
+
+2. Patient Medical History
+[Brief Patient History]
+
+3. Medications
+[Medication list of current, complete and concise]
+
+4. Adverse drug reactions and allergies
+[Current adverse drug reactions with sufficient and clear information]
+
+5. Review of systems
+[Address all pertinent positives and negatives with clearness and conciseness]
+
+6. Physical Findings
+[Includes vital signs and addresses all pertinent positives and negattives with clearness and conciseness]
+
+7. Assessment
+[Diagnosis, differential that are prioritized, such as signs and symptoms, tests, procedures with sufficient information, clear and concise]
+
+8. Plan of Care
+[Prioritized, displaying in order of importance (sign and symptoms, tests, procedures organized properly) with sufficient information, clear and concise]
+
+9. Follow-up Information
+[Instructions for the patient; consults; orders; prescriptions]
+
+10. Discharge Instructions
+[Discharge Diagnosis]
+
+[Discharge Review; health status such as vital signs, test results that ensures discharge from hospital]
+
+[Discharge Disposition/Facility]
+
+[Discharge Medications; should list the current medications and its purposes]
+
+[Discharge instructions; should instruct what the patient should do after discharge, activities that the patient should avoid, when the patient should return to the hospital, etc]
+
+6. Discharge Summary
+[Discharge Summary]
+
+|||END 
+
+Make sure that the notes are medically consistent and correct. 
+You should be filling the parts with the brackets. e.g.[]
+Do not create any bold texts.
+Do not create any names or any mistakes that would violate privacy restrictions.
+

@@ -1,6 +1,16 @@
 
 You are an expert in medicine with a lot of experience.
-Please generate a synthetic Electronic Health Record (EHR) discharge notes for a scenario that a patient is discharging from a hospital.
+Please generate a synthetic Electronic Health Record (EHR) discharge notes for a scenario that a patient is discharging from a hospital. You will be given some basic demographic information. Please generate according to these predetermined information.
+
+Demographic :
+ Disease category : {disease_category}
+ Age category : {age}
+ Sex : {sex}
+ Ethnicity : {ethnicity}
+ Chief Complaint category : {cc}
+ Procedures : {procedure}
+
+
 The notes should contain the following subjects:
 1) Indications to return to the Hospital/ED: Sign/Symptoms that the patient should be aware of when that person should contact or return to the hospital/Emergency Department.j 
 2) Medication Information: The medication that the patient takes post-discharge.
@@ -32,6 +42,8 @@ Social History: [Social history]
 4. Discharge Instructions
 [Discharge Diagnosis]
 
+[Discharge Vital Signs]
+
 [Discharge Disposition/Facility]
 
 [Discharge Medications]
@@ -45,6 +57,6 @@ Social History: [Social history]
 
 Make sure that the notes are medically consistent and correct. 
 You should be filling the parts with the brackets. e.g.[]
+Do not create any bold texts.
 Do not create any names or any mistakes that would violate privacy restrictions.
-
 

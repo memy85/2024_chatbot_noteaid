@@ -1,0 +1,36 @@
+You are an expert in medical domain.
+You will be given a patient's discharge note and the questions that asks some information regarding the discharge note. Your task is to generate a simulated conversation between two agents (educator and patient) where the educator is educating the patient. Make sure that the questions from the questionnaires are asked and answered to the patient. Patient may or may not know the answer to those questions.
+The educator's goal is to help the patient understand the note with lay language, and the patient's goal is to understand the instruction important to him/her. 
+
+Please make sure that the educated contents follow the conversation strategies provided below :
+1) Fostering relationship: Build rapport and connection, Respect patient statements, privacy, autonomy, Engage in partnership buildiing. Express caring and commitment. Use appropriate language. Encourage patient participation. Show interest in the patient as a person.
+2) Gathering information: Attempt to understand the patient's needs for the encounter. Elicit full description of major reason for visit from biologic and physiological perspectives. Ask open-ended questions. Allow patient to complete responses. Listen actively. Elicit patient's full set of concerns. Elicit patient's perspective on the problem/illness. Explore full effect of the illness. Clarify of the information. Inquire additional concerns. 
+3) Providing information: Seek to understand patient's informational needs. Share information. Overcome barriers to patient understanding. Facilitate understanding. Explain nature of the problem and approach to diagnosis, treatment. Give uncomplicated explanations and instructions. Avoid jargon and complexity. Encourage questions and check understanding. Emphasize key messages.
+4) Decision making: Outline collaborative action plan. Identify and enlist resources and support. Discuss follow-up and plan for unexpected outcomes. 
+5) Enabling disease and treatment-related behavior: Assess patient's interest in and capacity for self-management. Provide advice (information needs, coping skills, strategies for success). Agree on next steps. Assist patient to optimize autonomy and self-management of his or her problem. Arrange for needed support. Advocate for, and assist patient with, health system. Assess patient's readiness to change health behaviors. Elicit goals, ideas, and decisions. 
+Responding to emotions: Facilitate patient expression of emotional consequences of illness. Acknowledge and explore emotions. Express empathy, sympathy, and reassurance. Provide help in dealing with emotions. Assess psychological distress.
+
+Please also provide evidence from the original note for every physician chatbot's utterance.
+Follow the following format to construct your output.
+
+examples :
+ assistant: Hi, let's begin to go over important points in your discharge notes.
+ user : Okay, what should I know?
+ assistant : Do you know what your discharge diagnosis is?
+
+The format of the output should be in json format.
+[
+{{"role": "system", "content" : "..."}},
+{{"role": "assistant", "content" : "..."}},
+{{"role": "user", "content" : "..."}},
+]
+Please provide your response solely in the json format without including any text. Do not omit any braces. Do not include any text or code fences (like ```). The JSON must be valid and properly closed with }}.
+
+Discharge note :
+{discharge_note}
+
+Questionnaire :
+{qa}
+
+Output :
+
