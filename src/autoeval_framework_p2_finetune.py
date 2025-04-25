@@ -39,44 +39,44 @@ def form_dataset() :
         #     sft_chat.append(chat[i])
         # chat = sft_chat
 
-    # prompt = config.load_prompts("autoeval_stage1.txt")
-    base = "You are a doctor who is having a conversation with a patient to help them understand the key details of their discharge note. You will explain their diagnosis, treatment plan, medications, and follow-up instructions in a clear and supportive manner. Your dialogue will be 1-3 sentences in length, and you should encourage the patient to ask questions if anything is unclear. If you don't have any questions to ask the patient, say <end_of_conversation>."
-    new_rows = []
-    for i, row in notes.iterrows():
-        #     # q = str(q)
-        note = row['note']
-        conversation = chat[i]
-
-        # Add <end of conversation> at the end
-        if conversation[-1]['role'] == 'assistant':
-            conversation[-1]['content'] += " <end_of_conversation>"
-        else:
-            conversation.append({
-                'role': 'assistant',
-                'content': 'Thanh you! <end_of_conversation>'
-            })
-        # system_prompt = prompt.format(discharge_note=note)
-        presentation = "\nBelow is the discharge note of the patient: {}. \n".format(note)
-        system_prompt = base + presentation
-        new_rows.append({"messages": [{"role": "system", "content": system_prompt}] + conversation})
-        # import ipdb; ipdb.set_trace()
-    new_rows = Dataset.from_list(new_rows)
-    return new_rows
-
-    #
+    prompt = config.load_prompts("autoeval_stage1.txt")
+    # base = "You are a doctor who is having a conversation with a patient to help them understand the key details of their discharge note. You will explain their diagnosis, treatment plan, medications, and follow-up instructions in a clear and supportive manner. Your dialogue will be 1-3 sentences in length, and you should encourage the patient to ask questions if anything is unclear. If you don't have any questions to ask the patient, say <end_of_conversation>."
     # new_rows = []
-    # for i, row in notes.iterrows() :
-    # #     # q = str(q)
+    # for i, row in notes.iterrows():
+    #     #     # q = str(q)
     #     note = row['note']
     #     conversation = chat[i]
     #
-    #     # Add <end of conversation> at the end 
-    #     conversation[-1]['content'] += " <end of conversation>"
-    #     system_prompt = prompt.format(discharge_note=note)
-    #
-    #     new_rows.append({"messages" : [{"role" : "system", "content" : system_prompt}] + conversation })
+    #     # Add <end of conversation> at the end
+    #     if conversation[-1]['role'] == 'assistant':
+    #         conversation[-1]['content'] += " <end_of_conversation>"
+    #     else:
+    #         conversation.append({
+    #             'role': 'assistant',
+    #             'content': 'Thanh you! <end_of_conversation>'
+    #         })
+    #     # system_prompt = prompt.format(discharge_note=note)
+    #     presentation = "\nBelow is the discharge note of the patient: {}. \n".format(note)
+    #     system_prompt = base + presentation
+    #     new_rows.append({"messages": [{"role": "system", "content": system_prompt}] + conversation})
+    #     # import ipdb; ipdb.set_trace()
     # new_rows = Dataset.from_list(new_rows)
     # return new_rows
+
+
+    new_rows = []
+    for i, row in notes.iterrows() :
+    #     # q = str(q)
+        note = row['note']
+        conversation = chat[i]
+
+        # Add <end of conversation> at the end 
+        conversation[-1]['content'] += " <end of conversation>"
+        system_prompt = prompt.format(discharge_note=note)
+
+        new_rows.append({"messages" : [{"role" : "system", "content" : system_prompt}] + conversation })
+    new_rows = Dataset.from_list(new_rows)
+    return new_rows
 
 def load_datasets() :
     df = form_dataset()
